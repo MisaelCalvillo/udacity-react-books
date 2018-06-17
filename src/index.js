@@ -4,6 +4,9 @@ import './index.css';
 import App from './App';
 import registerServiceWorker from './registerServiceWorker';
 
+// Import Bootstrap styles
+import 'bootstrap/dist/css/bootstrap.min.css';
+
 // Import the global styles
 import './assets/css/styles.css';
 
