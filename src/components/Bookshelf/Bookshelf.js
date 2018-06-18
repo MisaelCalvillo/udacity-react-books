@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 
 /* Import the API functions */
-import { get, getAll, update, search }  from './../../assets/API/BooksAPI';
+import { getAll }  from './../../assets/API/BooksAPI';
 
 // Import other components
 import Book from './../Book/Book';
@@ -34,7 +34,6 @@ class Bookshelf extends Component {
       this.setState(() => ({
         books: data
       }));
-      console.log(data);
     }).catch( error => console.log(error))
   }
 

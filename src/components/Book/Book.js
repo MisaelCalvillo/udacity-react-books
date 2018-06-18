@@ -1,14 +1,21 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 
 class Book extends Component {
 
-  render() {
-    const { bookImage, bookTitle, bookAuthors, bookId } = this.props;
+  static propTypes = {
+    bookImage: PropTypes.string.isRequired,
+    bookTitle: PropTypes.string.isRequired,
+    bookAuthors: PropTypes.arrayOf(PropTypes.string).isRequired
+  }
 
-    const bookAuthorsDivided = bookAuthors.map( author => (<p className="Book_author">{author}</p>));
+  render() {
+    const { bookImage, bookTitle, bookAuthors} = this.props;
+
+    const bookAuthorsDivided = bookAuthors.map( author => (<p className="Book_author" key={author}>{author}</p>));
 
     return (
-        <div className="Book" key={ bookId }>
+        <div className="Book">
           <img className="Book_image" src={ bookImage } alt="Book cover"/>
           <div className="Book_edit">
             <a className="Book_edit--icon" href="#book" title="Edit">
