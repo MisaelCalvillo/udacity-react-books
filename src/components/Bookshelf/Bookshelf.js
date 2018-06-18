@@ -20,7 +20,8 @@ class Bookshelf extends Component {
         <Book 
           bookImage = { book.imageLinks.thumbnail }
           bookTitle = { book.title }
-          bookAuthor = { book.author }
+          bookAuthors = { book.authors }
+          key = { book.id }
         />
       ))
     } else {
@@ -40,7 +41,7 @@ class Bookshelf extends Component {
   render(){
     console.log("State: ", this.state);
     return(
-      <div>{this.renderMyBooks()}</div>
+      <div className="Bookshelf">{this.renderMyBooks()}</div>
     )
   }
 }
