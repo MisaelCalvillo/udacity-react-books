@@ -1,0 +1,59 @@
+.Book {
+  width: 200px;
+  margin: 20px;
+  display: inline-block;
+  position: relative;
+
+  &_image {
+    width: 100%;
+    max-height: 250px;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+  }
+  &_title {
+    font-size: 0.9em;
+    font-weight: 900;
+    margin: 0;
+    text-align: center;
+  }
+  &_author{
+    font-size: 0.9em;
+    font-weight: 500;
+    margin: 0;
+    padding-bottom: 7px;
+    text-align: center;
+    color: #999;
+  }
+  &_edit {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    transition: .3s ease;
+    background-color: rgba(0,0,0,.16);
+
+    &--icon{
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+      text-align: center;
+
+      svg {
+        width: 100px;
+
+        .white {
+          fill: #fff;
+        }
+      }
+    }
+  }
+
+  &:hover &_edit{
+    opacity: 1;
+  }
+}
