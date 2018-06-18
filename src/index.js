@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
+
+// Import the app
 import App from './App';
 import registerServiceWorker from './registerServiceWorker';
 
@@ -11,7 +12,7 @@ import { BrowserRouter } from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 // Import the global styles
-import './assets/css/styles.css';
+import './assets/css/main.css';
 
 ReactDOM.render(
   <BrowserRouter>
